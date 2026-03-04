@@ -22,6 +22,7 @@ public class Faculty {
 	 @Column(length = 50 , nullable = false)
 	 private String designation;
 	 @Column(length = 50 , nullable = false , unique = true)
+	 
 	 private String email;
 	 @Column(length = 50 , nullable = false)
 	 private String password;
@@ -29,7 +30,6 @@ public class Faculty {
 	 private String contact;
 	 @Column(nullable = false,precision = 6 ,scale = 2)//Applies only if a decimal column is used
 	 private BigDecimal salary;
-	 
 	 public BigDecimal getSalary() {
 		return salary;
 	}
