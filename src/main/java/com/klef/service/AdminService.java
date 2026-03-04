@@ -3,6 +3,7 @@ package com.klef.service;
 import java.util.List;
 
 import com.klef.model.Admin;
+import com.klef.model.Faculty;
 import com.klef.model.Student;
 
 public interface AdminService {
@@ -10,6 +11,9 @@ public interface AdminService {
  	public Admin checkAdminLogin(Admin a);
 	public String addStudent(Student s);
 	public List<Student> viewAllStudents();
+	
+	public String addFaculty(Faculty s);
+	public List<Faculty> viewAllFaculty();
 	
 
 
