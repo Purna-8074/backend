@@ -25,6 +25,10 @@ public class Student
    private String contact;
 	@Column(length = 30,nullable = false)
 	private String password;
+	
+//	@OneToMany
+//	private List<Certtification> certification
+	
    //setter and getter methods 
 public long getId() {
 	return id;

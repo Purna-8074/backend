@@ -72,7 +72,7 @@ public class AdminController
 		}
 		else 
 		{
-			return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Student Data Not Found");
+			return ResponseEntity.status(404).body("Student Data Not Found");
 		}
 	
 	}

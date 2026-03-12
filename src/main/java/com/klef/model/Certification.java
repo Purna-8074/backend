@@ -1,25 +1,41 @@
 package com.klef.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Certification {
 	
 	@Id
     private int id;
+	@Column(nullable = false)
     private String category;
+	@Column(nullable = false)
     private String company;
+	@Column(nullable = false)
     private String title;
+	@Column(nullable = false)
     private String level;
+	@Column(nullable = false,unique = true)
     private String examtype;
+	@Column(nullable = false)
     private String certificateid;
+	@Column(nullable = false)
     private String issueddate;
+	@Column(nullable = false)
     private String expiarydate;
+	@Column(nullable = false,unique = true)
     private String certificateurl;
-    private String status;
+	@Column(nullable = false,unique = true)
+    private String status; //Submitted or accpeted or rejected
     
-    //By Whom Student upload the certificate 
+    //By Whom Student upload the certificate
+	
+	@ManyToOne
+    @JoinColumn(name="student_id")
     private Student student;
 
 	public int getId() {
